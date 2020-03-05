@@ -1,10 +1,10 @@
 function runningTotal(arr) {
-  let currentSum = arr[0];
-  for (let i = 1; i < arr.length; i++) {
-    arr[i] += currentSum;
-    currentSum += arr[i];
-  }
-  return arr;
+  let sum = 0;
+  let resultArray = arr.map(x => {
+    sum += x;
+    return sum;
+  });
+  return resultArray;
 }
 
 console.log(runningTotal([2, 5, 13]));             // [2, 7, 20]
